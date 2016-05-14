@@ -1,0 +1,34 @@
+{
+    "name": "inblank/yii2-seobility",
+    "type": "yii2-extension",
+    "description": "The SEO support behavior for the Yii 2 framework",
+    "keywords": [
+        "yii2",
+        "SEO",
+        "HTML",
+        "behavior"
+    ],
+    "homepage": "https://github.com/inblank/yii2-seobility",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pavel Aleksandrov",
+            "email": "inblank@yandex.ru",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0"
+    },
+    "require-dev": {
+        "codeception/codeception": "^2.1",
+        "codeception/specify": "*",
+        "codeception/verify": "*",
+        "yiisoft/yii2-codeception": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "inblank\\seobility\\": "src"
+        }
+    }
+}
