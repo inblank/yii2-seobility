@@ -72,7 +72,9 @@ class Seo extends Model
                 'model_id' => $owner->getPrimaryKey(),
             ])->one($owner->getDb());
         $seo->_isNewRecord = empty($data);
-        $seo->setAttributes($data);
+        if (!$seo->_isNewRecord) {
+            $seo->setAttributes($data);
+        }
         $seo->condition = $condition;
         return $seo;
     }
@@ -82,7 +84,7 @@ class Seo extends Model
      * @param ActiveRecord $activeRecord
      * @return string
      */
-    static public function tableName(ActiveRecord $activeRecord)
+    public static function tableName(ActiveRecord $activeRecord)
     {
         $tableName = $activeRecord->tableName();
         if (substr($tableName, -2) == '}}') {
@@ -119,7 +121,7 @@ class Seo extends Model
      * Delete all SEO data for ActiveRecord
      * @param ActiveRecord $owner
      */
-    static public function deleteAll(ActiveRecord $owner)
+    public static function deleteAll(ActiveRecord $owner)
     {
         $owner->getDb()->createCommand()->delete(self::tableName($owner), ['model_id' => $owner->getPrimaryKey()])->execute();
     }

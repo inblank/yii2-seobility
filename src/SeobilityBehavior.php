@@ -81,7 +81,7 @@ class SeobilityBehavior extends Behavior
     public function afterDelete()
     {
         Seo::deleteAll($this->owner);
-        $this->_seo = null;
+        $this->_seo = [];
     }
 
     /**
