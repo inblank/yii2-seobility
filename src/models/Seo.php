@@ -72,7 +72,7 @@ class Seo extends Model
                 'model_id' => $owner->getPrimaryKey(),
             ])->one($owner->getDb());
         $seo->_isNewRecord = empty($data);
-        if (!$seo->_isNewRecord) {
+        if ($data) {
             $seo->setAttributes($data);
         }
         $seo->condition = $condition;
