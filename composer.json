@@ -1,7 +1,7 @@
 {
     "name": "inblank/yii2-seobility",
     "type": "yii2-extension",
-    "description": "The SEO support behavior for the Yii 2 framework",
+    "description": "Behavior for Yii 2 to support work with SEO data in ActiveRecord",
     "keywords": [
         "yii2",
         "SEO",
