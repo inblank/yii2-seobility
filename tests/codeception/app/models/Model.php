@@ -11,6 +11,8 @@ use yii\db\ActiveRecord;
  * @property int $id
  * @property string $name
  *
+ * @property string[] $seobility
+ *
  * @method void setSeobility($values, $condition = 0)
  * @method string[] getSeobility($condition = 0, $defaultIfNotFound = true, $defaultCondition = 0)
  * @method  array getAllSeobility($force = false)
