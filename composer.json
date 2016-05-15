@@ -1,7 +1,7 @@
 {
     "name": "inblank/yii2-seobility",
     "type": "yii2-extension",
-    "description": "Behavior for Yii 2 to support work with SEO data in ActiveRecord",
+    "description": "Behavior for Yii2 to manage SEO data for ActiveRecord",
     "keywords": [
         "yii2",
         "SEO",
@@ -22,9 +22,9 @@
     },
     "require-dev": {
         "codeception/codeception": "^2.1",
-        "codeception/specify": "*",
-        "codeception/verify": "*",
-        "yiisoft/yii2-codeception": "*"
+        "codeception/specify": "~0.4",
+        "codeception/verify": "~0.3",
+        "yiisoft/yii2-codeception": "~2.0"
     },
     "autoload": {
         "psr-4": {

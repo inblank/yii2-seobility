@@ -69,7 +69,7 @@ CREATE TABLE `model_seo`(
 ### Model
 
 To use a behavior just attach it to the ActiveRecord model as specified in the 
-[Yii2 documentation](https://github.com/yiisoft/yii2/blob/master/docs/guide-ru/concept-behaviors.md)
+[Yii2 documentation](http://www.yiiframework.com/doc-2.0/guide-concept-behaviors.html)
  
 ```php
 use inblank\seobility\SeobilityBehavior;
