@@ -89,6 +89,15 @@ class SeobilityTest extends TestCase
             expect("saved SEO data record 2 must be equals", $model->getSeobility(1))->equals($seo2);
         });
 
+        $this->specify("test direct access to default SEO data", function () use ($values, $seo) {
+            /** @var Model $model */
+            $model = Model::findOne(1);
+            expect("SEO data must be equal", $model->seobility)->equals($seo);
+            $newTitle = ['title' => 'Updated title by direct access'];
+            $model->seobility = $newTitle;
+            expect("SEO title must be new", $model->seobility['title'])->equals($newTitle['title']);
+        });
+
         $this->specify("we delete one SEO data", function () use ($values, $seo2) {
             $model = Model::findOne(1);
             $model->deleteSeobility();
